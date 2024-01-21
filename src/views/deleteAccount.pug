@@ -1,0 +1,29 @@
+extends base
+block head
+  style.
+    .address {
+      font-weight: 600;
+      width: 100%;
+    }
+
+    .deletion-msg {
+      color: #333;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+block content
+  p.address Dear #{username}
+  p.deletion-msg 
+    span We're sad to see you go, but we respect your decision. Your account with APP has been successfully deleted. 
+    br 
+    span If you have any feedback or reasons for your departure, we'd love to hear from you. Your input is valuable and helps us improve our services. 
+    br
+    span If you ever decide to return, we'll be here with open arms. 
+    br
+    span In the meantime, thank you for being a part of APP. We wish you all the best in your future endeavors. If you have any questions or concerns, please don't hesitate to contact our support team at 
+    u: i: strong costy.development@gmail.com. 
+    span Take care, and farewell!
+  p.regards Best regards,
+  p.regards The
+    strong &nbsp;Costy Team

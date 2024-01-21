@@ -1,0 +1,38 @@
+extends base
+block head
+  style.
+    .circle {
+      background-image:url("#{origin}/assets/calculator.webp");
+      background-repeat:no-repeat;
+      background-position: 120% 195%;
+      background-size: 70%;
+    }
+
+    .content-box{
+      background-color: rgba(299, 299, 299, 0.5);
+      backdrop-filter: blur(3px);
+    }
+
+    .title {
+      color: #404040;
+      margin-top:20px;
+    }
+
+    .subtitle {
+      margin-top: 25px;
+      color: #1f1ade;
+    }
+
+    .message {
+      margin-top: 10px;
+      color: #404040;
+    }
+block content
+  table.circle(style=`background-image:url('${origin}/assets/calculator.webp');background-repeat:no-repeat;background-position:120% 195%;background-size:70%;`)
+    tr
+      td.content-row
+        table.logo(style=`background-image:url('${origin}/assets/logo.png');background-repeat:no-repeat;background-position:0%;background-size:100%;`)
+        div.content-box
+          p.title #{title}
+          p.subtitle #{subTitle}
+          p.message #{text}

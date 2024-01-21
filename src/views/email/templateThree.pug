@@ -1,0 +1,48 @@
+extends base
+block head
+  style.
+    .template-circle {
+      background-image:url("#{origin}/assets/ship.webp");
+      background-repeat:no-repeat;
+      background-position:150px 160%;
+      background-size:110%;
+    }
+
+    .template-three__form {
+      height: 77%;
+      width: max-content;
+    }
+
+    .title {
+      color: #1f1ade;
+      margin-top:20px;
+    }
+
+    .template-three__list {
+      margin-top: 20px;
+    }
+
+    .list-item {
+      margin-left: 20px;
+      list-style: disc;
+      font-weight: 600;
+      color: #404040;
+      font-size: 20px;
+      margin-top:10px;
+    }
+
+    .list-item::marker {
+      color: #1f1ade;
+      font-size: 25px;
+    }
+block content 
+  table.circle(style=`background-image:url('${origin}/assets/ship.webp');background-repeat:no-repeat;background-position:150px 160%;background-size:110%;`)
+    tr
+      td.content-row
+        table.logo(style=`background-image:url('${origin}/assets/logo.png');background-repeat:no-repeat;background-position:0%;background-size:100%;`)
+        div.content-box
+          p.title #{title}
+          ul.template-three__list
+            each item in list
+              li.list-item=item
+

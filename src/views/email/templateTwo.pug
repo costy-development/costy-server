@@ -1,0 +1,47 @@
+extends base
+block head
+  style.
+    .circle {
+      background-image:url("#{origin}/assets/ship.webp");
+      background-repeat:no-repeat;
+      background-position:50% 110%;
+      background-size:90%;
+    }
+
+    .title-box{
+      height:290px;
+    }
+
+    .title {
+      color: #1f1ade;
+      margin-top:20px;
+    }
+
+    .title.secondary {
+      color: #404040;
+    }
+
+
+    .subtitle {
+      width: 70%;
+      color: #fff;
+      margin-top:10px;
+    }
+
+    .message {
+      width: 50%;
+      margin-top:5px;
+      color: #fff;
+      font-size: 0.85em;
+    }
+block content 
+  table.circle(style=`background-image:url('${origin}/assets/ship.webp');background-repeat:no-repeat;background-position:50% 110%;background-size:90%;`)
+    tr
+      td.content-row
+        table.logo(style=`background-image:url('${origin}/assets/logo.png');background-repeat:no-repeat;background-position:0%;background-size:100%;`)
+        div.content-box
+          div.title-box
+            p.title #{title}
+            P.title.secondary #{titleSecondary}
+          p.subtitle #{subTitle}
+          p.message #{text}

@@ -1,0 +1,26 @@
+extends base
+block head
+  style.
+    .circle {
+      background-image:url("#{origin}/assets/join-us.webp");
+      background-repeat:no-repeat;
+      background-position:50%;
+      background-size:65%;
+    }
+
+    .content-box{
+      margin-top:320px;
+    }
+
+    .title {
+      width: 100%;
+      color: #1f1ade;
+      font-size:38px;
+    }
+block content 
+  table.circle(style=`background-image:url('${origin}/assets/join-us.webp');background-repeat:no-repeat;background-position:50%;background-size:65%;`)
+    tr
+      td.content-row
+        table.logo(style=`background-image:url('${origin}/assets/logo.png');background-repeat:no-repeat;background-position:0%;background-size:100%;`)
+        div.content-box
+          p.title #{title}
