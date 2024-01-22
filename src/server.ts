@@ -1,7 +1,12 @@
 import App from "./app";
 import mongoose from "mongoose";
 import { createServer } from "http";
-import { PORT, DB_APP_CONNECTION, APP_ORIGINS } from "./config/env";
+import {
+  PORT,
+  NODE_MODE,
+  DB_APP_CONNECTION,
+  DB_DEV_APP_CONNECTION,
+} from "./config/env";
 
 const SERVER = createServer(App);
 
@@ -15,7 +20,7 @@ process.on("uncaughtException", (error) => {
 
 mongoose.set("strictQuery", false);
 mongoose
-  .connect(DB_APP_CONNECTION)
+  .connect(NODE_MODE === "DEV" ? DB_DEV_APP_CONNECTION : DB_APP_CONNECTION)
   .then(() => {
     console.log("DB Is Connected Successfully ♻");
     SERVER.listen(PORT, () => {

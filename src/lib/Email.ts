@@ -67,7 +67,7 @@ export class Email {
           username: this.generateUppercaseUsername(args.username),
           subHead: `Dear ${this.generateUppercaseUsername(
             args.username
-          )} Welcome to Costy! We're thrilled to have you on board. Thank you for choosing us.`,
+          )} კეთილი იყოს თქვენი მობრძანება Costy-ში ! მოხარული ვართ რომ შემოგვიერთდით. მადლობა ჩვენი არჩევისათვის.`,
         }),
       });
     } catch (error) {
@@ -83,7 +83,7 @@ export class Email {
         subject: "Costy Account Deletion Confirmation",
         html: pug.renderFile(this.generateDirPath("deleteAccount"), {
           username: this.generateUppercaseUsername(args.username),
-          subHead: `Account Deletion`,
+          subHead: `ანგარიშის წაშლა`,
         }),
       });
     } catch (error) {
@@ -100,7 +100,7 @@ export class Email {
         html: pug.renderFile(this.generateDirPath("forgotPassword"), {
           username: this.generateUppercaseUsername(args.username),
           pin: args.pin,
-          subHead: "Forgot Password",
+          subHead: "პაროლის აღდგენა",
         }),
       });
     } catch (error) {

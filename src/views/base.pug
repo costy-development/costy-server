@@ -1,4 +1,4 @@
-
+include _emailPreset.pug
 doctype html
 html(lang="en")
   head
@@ -18,41 +18,36 @@ html(lang="en")
       }
 
       .container {
-        width: 100%;
-        display: flex;
-        justify-content: center;
         padding: 20px;
       }
 
       .content__box {
         width: 100%;
         max-width: 600px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 18px;
+        margin:0 auto;
         padding: 40px 20px;
         border-radius: 8px;
         border: 1px solid #e4e8ef;
-        box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.3);
       }
 
       .logo__fig {
         width: 173px;
         height: 98px;
+        margin:0 auto;
+        background-image:url("#{origin}/assets/logo.png");
+        background-size:100%;
+        background-repeat:no-repeat;
       }
 
       .heading__box {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        margin-top:18px;
+        text-align:center;
       }
 
       .heading {
         letter-spacing: 1px;
         line-height: 1.5;
+        text-align:center;
       }
 
       .subheading {
@@ -60,8 +55,11 @@ html(lang="en")
         letter-spacing: 1px;
         line-height: 1.3;
         text-align: center;
+        width:100%;
+        margin-top:16px;
       }
     block head
+    +emailPresetStyles
     title Costy
   body 
     //- Forgot Password

@@ -6,16 +6,17 @@ block head
       color: #333;
       font-weight: 500;
       letter-spacing: 1px;
+      text-align:center;
+      margin-top:18px;
     }
 
     .start-list {
       list-style: none;
+      margin-top:18px;
     }
 
     .start-list__item {
-      display: flex;
-      flex-direction: column;
-      gap: "12px";
+      margin-top:16px;
     }
 
     .start-list__item:not(:first-child) {
@@ -29,7 +30,7 @@ block head
     .start-list__item-msg {
       font-style: italic;
       font-size: 14px;
-      margin-top: 5px;
+      margin-top: 7px;
       padding-left: 12px;
       color: #333;
     }
@@ -39,24 +40,29 @@ block head
       font-weight: 500;
       letter-spacing: 1px;
       font-size: 14px;
+      margin-top:18px;
     }
 
     .regards {
+      margin-top:18px;
       color: #333;
       text-align: end;
       font-size: 14px;
       width: 100%;
     }
 block content
-  p.heading-tertiary Here are a few things to get you started:
+  p.heading-tertiary აქ არის რამდენიმე ნაბიჯი თუ როგორ დაიწყო:
   ul.start-list
     li.start-list__item
-      p.start-list__item-head **Explore Your Dashboard**
-      p.start-list__item-msg Log in to your account and explore the features and functionalities available in your dashboard. If you have any questions, our support team is here to help.
-    li.things-list__item
-      p.start-list__item-head **Complete Your Profile**
-      p.start-list__item-msg Personalize your profile by adding a profile picture and updating your information. This helps us tailor your experience and connect you with relevant content.
-  p.epilog Once again, welcome to the [Your Web App Name] community! We're excited to have you with us.
-  p.regards Best regards,
-  p.regards The
-    strong &nbsp;Costy Team
+      p.start-list__item-head ** აღმოაჩინე შენი სამართავი პანელი **
+      p.start-list__item-msg 
+        span გაიარე ავტორიზაცია რომ აღმოაჩინო ის ფუნქციონალები რომლებიც შენთვის ხელმისაწვდომია.
+        br
+        span კითხვების არსებობის შემთხვევაში ჩვენი გუდნი სიამოვნებით დაგეხმარებათ
+    li.start-list__item
+      p.start-list__item-head ** დაასრულე პროფილის მორგება **
+      p.start-list__item-msg დაასრულე ანგარიშის შევსება პროფილის ფოტოს  დამატებით და ინფორმაციის შევსებით, ეს დაგვეხმარება გავეცნოთ შენს გამოცდიელბას და შემოგთავაზოთ შენთვის საჭირო ინფორმაცია.
+  p.epilog კიდევ ერთხელ მადლობას გიხდით ქოსთით სარგებლობისთვის.
+  p.regards Საუკეთესო სურვილებით
+  p.regards 
+    strong &nbsp;Costy

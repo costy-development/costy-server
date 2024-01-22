@@ -52,12 +52,9 @@ App.get("/", async (req, res, next) => {
 });
 
 App.get("/views", async (req, res, next) => {
-  res.status(200).render("email/templateOne", {
-    title: "News in January:",
-    list: ["item 1", "item 2", "item 3"],
-    titleSecondary: "New Tool Release",
-    subTitle: "Lorem ipsum dolor sit amet",
-    text: "Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet",
+  res.status(200).render("deleteAccount", {
+    username: "Joni",
+    subHead: "ანგარიშის წაშლა",
   });
 });
 
