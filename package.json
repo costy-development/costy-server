@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "compile": "tsc -p . && npm run copy:assets && npm run copy:css && npm run copy:views",
-    "copy:views": "copyfiles -u 2 src/views/*/** build/views",
+    "copy:views": "copyfiles -u 2 src/views/**/* build/views",
     "copy:css": "copyfiles -u 3 src/public/css/* build/public/css",
     "copy:assets": "copyfiles -u 3 src/public/assets/* build/public/assets",
     "watch": "nodemon --exec ts-node --files ./src/server.ts",
