@@ -25,8 +25,8 @@ const App = express();
 App.set("view engine", "pug");
 App.set("views", path.join(__dirname, "/views"));
 
-App.use(express.json());
-App.use(express.urlencoded({ extended: true }));
+App.use(express.json({ limit: "15mb" }));
+App.use(express.urlencoded({ extended: true, limit: "15mb" }));
 App.use(express.static(path.join(__dirname, "public")));
 
 App.use(cookieParser());
